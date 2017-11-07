@@ -34,7 +34,7 @@ class Dog
     new_id = DB[:conn].execute("select * from dogs where id = #{id}").flatten
     dog = Dog.new(name: new_id[1], breed: new_id[2], id: new_id[0])
     dog
-    binding.pry
+  #  binding.pry
   end
 
 end
