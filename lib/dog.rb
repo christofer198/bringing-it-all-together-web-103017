@@ -50,7 +50,10 @@ class Dog
       # binding.pry
     end
     #binding.pry
-
   end
+
+  def self.new_from_db(row)
+    
+  end 
 
 end
