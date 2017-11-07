@@ -53,7 +53,7 @@ class Dog
   end
 
   def self.new_from_db(row)
-    
-  end 
+    binding.pry
+  end
 
 end
