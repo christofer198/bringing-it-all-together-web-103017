@@ -21,7 +21,7 @@ class Dog
   def save
     #binding.pry
     DB[:conn].execute("insert into dogs(name, breed) values ('#{self.name}', '#{self.breed}')")
-    @id = DB[:conn].execute("select id from dogs where name='#{self.name}'").flatten.join.to_i
+    @id = DB[:conn].execute("select id from dogs where name='#{self.name}'").flatten[0]
     self
   end
 
@@ -48,7 +48,6 @@ class Dog
       #return dog
       Dog.new(name: row[1], breed: row[2], id: row[0])
       # binding.pry
-
     end
     #binding.pry
 
