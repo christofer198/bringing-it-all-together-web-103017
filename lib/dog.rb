@@ -21,6 +21,7 @@ class Dog
   def save
     #binding.pry
     DB[:conn].execute("insert into dogs(name, breed) values ('#{self.name}', '#{self.breed}')")
+    self
   end
 
 end
