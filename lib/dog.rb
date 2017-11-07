@@ -38,6 +38,7 @@ class Dog
   end
 
   def self.find_or_create_by(name:, breed:)
+    dog = Dog.new(name: name, breed: breed)
     binding.pry
 
   end
