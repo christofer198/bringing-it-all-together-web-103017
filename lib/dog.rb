@@ -22,6 +22,7 @@ class Dog
     #binding.pry
     DB[:conn].execute("insert into dogs(name, breed) values ('#{self.name}', '#{self.breed}')")
     self
+    @id = DB[:conn].execute("select id from dogs where name='#{self.name}'").flatten.join
   end
 
 end
