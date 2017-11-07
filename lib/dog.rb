@@ -32,6 +32,7 @@ class Dog
 
   def self.find_by_id(id)
     new_id = DB[:conn].execute("select * from dogs where id = #{id}").flatten
+    dog = Dog.new(new_id[1])
     binding.pry
   end
 
