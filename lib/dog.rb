@@ -39,6 +39,7 @@ class Dog
 
   def self.find_or_create_by(name:, breed:)
     dog = Dog.new(name: name, breed: breed)
+    binding.pry
     DB[:conn].execute("select * from dogs where name='#{name}' AND breed='#{breed}'")
     #binding.pry
 
