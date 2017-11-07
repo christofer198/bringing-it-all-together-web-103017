@@ -43,7 +43,7 @@ class Dog
     row = DB[:conn].execute("select * from dogs where name='#{name}' AND breed='#{breed}'")
     if row == []
       #create dog
-      Dog.create(name: name, breed: breed)
+      self.create(name: name, breed: breed)
     else
       #return dog
       dog = Dog.new(name: row[1], breed: row[2], id: row[0])
