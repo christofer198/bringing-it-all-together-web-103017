@@ -40,8 +40,8 @@ class Dog
   def self.find_or_create_by(name:, breed:)
     #dog = Dog.new(name: name, breed: breed)
     #binding.pry
-    row = DB[:conn].execute("select * from dogs where name='#{name}' AND breed='#{breed}'")
-    if row == [[]]
+    row = DB[:conn].execute("select * from dogs where name='#{name}' AND breed='#{breed}'").flatten
+    if row == []
       #create dog
       Dog.create(name: name, breed: breed)
     else
