@@ -9,4 +9,7 @@ class Dog
     @id = id
     #binding.pry
   end
+
+  def self.create_table
+  end
 end
