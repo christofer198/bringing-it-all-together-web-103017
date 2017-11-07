@@ -54,7 +54,10 @@ class Dog
 
   def self.new_from_db(row)
     Dog.new(name: row[1], breed: row[2], id: row[0])
-    
   end
 
+  def self.find_by_name(name)
+    row = DB[:conn].execute("select * from dogs where name = #{name}").flatten
+    Dog.new_from_db(row)
+  end
 end
