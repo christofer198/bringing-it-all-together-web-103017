@@ -46,8 +46,7 @@ class Dog
       Dog.create(name: name, breed: breed)
     else
       #return dog
-      dog = Dog.new(name: row[1], breed: row[2], id: row[0])
-      dog
+      row
     end
     #binding.pry
 
