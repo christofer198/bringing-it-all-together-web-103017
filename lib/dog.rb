@@ -41,7 +41,7 @@ class Dog
     #dog = Dog.new(name: name, breed: breed)
     #binding.pry
     row = DB[:conn].execute("select * from dogs where name='#{name}' AND breed='#{breed}'")
-    if row == []
+    if row == [[]]
       #create dog
       Dog.create(name: name, breed: breed)
     else
