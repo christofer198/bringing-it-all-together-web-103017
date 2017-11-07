@@ -48,6 +48,8 @@ class Dog
       #return dog
       Dog.new(name: row[1], breed: row[2], id: row[0])
       row
+      binding.pry
+
     end
     #binding.pry
 
