@@ -60,4 +60,8 @@ class Dog
     row = DB[:conn].execute("select * from dogs where name = '#{name}'").flatten
     Dog.new_from_db(row)
   end
+
+  def update
+    
+  end
 end
